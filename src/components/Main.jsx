@@ -5,12 +5,12 @@ import Discover from './Discover';
 
 export default function Main() {
   return (
-    <div>
+    <main>
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/find' element={ <Find /> } />
         <Route path='/discover' element={ <Discover /> } />
       </Routes>
-    </div>
+    </main>
   )
 }
