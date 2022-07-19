@@ -48,6 +48,21 @@ main {
   background-color: #faf9f6;
 }
 
+.home-div {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.home-div h3 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-top: 0;
+  font-family: 'Bebas Nue', sans-serif;
+  text-transform: uppercase;
+}
+
 footer {
   background-color: #2BFFDB;
   text-align: center;
