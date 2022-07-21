@@ -1,8 +1,9 @@
-import {useState, useEffect} from 'react';
-import {search} from '../services/api';
+import {useState} from 'react';
+import {finalBookObjs} from '../services/api';
+import Bookshelf from './Bookshelf';
 
 export default function Find() {
-  const [listNames, setListNames] = useState([]);
+  const [booksList, setBooksList] = useState([]);
   
   function handleSubmit(event) {
     event.preventDefault();
@@ -14,11 +15,10 @@ export default function Find() {
     getData(titleInput, publisherInput, authorInput, isbnInput);
   }
 
-  async function getData(titleInput, publisherInput, authorInput, isbnInput) {
-    if(titleInput || publisherInput || authorInput || isbnInput) {
-      const data = await search(titleInput, publisherInput, authorInput, isbnInput);
-      console.log(data);
-      setListNames(data);
+  async function getData(title, publisher, author, isbn) {
+    if(title || publisher || author || isbn) {
+      const booksData = await finalBookObjs(title, publisher, author, isbn)
+      setBooksList(booksData);
     }
     else {
       alert('Please enter some search criteria');
@@ -41,8 +41,10 @@ export default function Find() {
         <label htmlFor='isbn'>ISBN: </label>
         <input type='text' name='isbn' />
 
-        <button>Find me a besteseller</button>
+        <button>Find me a bestseller</button>
       </form>
+
+      {booksList.length > 0 && <Bookshelf booksList = {booksList} />}
     </div>
   )
 }
