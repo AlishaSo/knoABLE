@@ -4,10 +4,20 @@ const BASE_URL1 = process.env.REACT_APP_BASE_URL1;
 const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL2 = process.env.REACT_APP_BASE_URL2;
 
-async function getListNames() {
+function getRandomNum(number) {
+  return Math.floor(Math.random() * number);
+}
+
+async function getRandomBook(date) {
   try {
-    const names = await axios.get(`${BASE_URL1}lists/names.json?api-key=${API_KEY}`);
-    return names.data.results;
+    const names = await axios.get(`${BASE_URL1}lists/full-overview.json?published_date=${date}&api-key=${API_KEY}`);
+
+    const listsLength = names.data.results.lists.length;
+    const randIndex = getRandomNum(listsLength);
+    const booksInListLength = names.data.results.lists[randIndex].books.length;
+// console.log(names.data.results.lists)
+    // console.log(names.data.results.lists[randIndex].books[getRandomNum(booksInListLength)])
+    return names.data.results.lists[randIndex].books[getRandomNum(booksInListLength)];
   } catch (error) {
     console.error(error);
   }
@@ -32,7 +42,6 @@ async function getListNames() {
 }
 
 const addImgToBookObj = async booksData => {
-  console.log(booksData)
   const newBookObjs = booksData.map(async book => {
     if(book.isbns[0]) {
       const bookCover = await getBookCover(book.isbns[0].isbn13);
@@ -48,10 +57,11 @@ const addImgToBookObj = async booksData => {
 
   return await Promise.all(newBookObjs);
 }
+
 const finalBookObjs = async (title, publisher, author, isbn) => {
   let books = await searchForBooks(title, publisher, author, isbn);
   let modifiedBooks = await addImgToBookObj(books);
   return modifiedBooks;
 }
 
-export {getListNames, finalBookObjs};
+export {getRandomBook, finalBookObjs};
