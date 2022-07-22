@@ -1,6 +1,6 @@
 import {nanoid} from 'nanoid';
 
-export default function Book(props) {
+export default function FoundBooks(props) {
   const {
     title,
     author,
@@ -11,7 +11,7 @@ export default function Book(props) {
 
   return (
     <div className='book'>
-      <img src={bookCover} alt='' />
+      <img src={bookCover} alt='Book cover' />
       <h2>{title}</h2>
       <h3>by {author}</h3>
       <p>{description}</p>

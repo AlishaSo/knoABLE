@@ -1,4 +1,4 @@
-import Book from './Book';
+import Book from './FoundBooks';
 import {nanoid} from 'nanoid';
 
 export default function Bookshelf(props) {
