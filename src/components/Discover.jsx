@@ -21,7 +21,9 @@ export default function Discover() {
 
   return (
     <div className='discover-div'>
+      <h2>Would you like to discover a new book that has been, or currently is, a NYT bestseller?</h2>
       <form onSubmit={handleSubmit}>
+        <label>Please enter a date to search within: </label>
         <input
           type='date'
           name='dateSelect'
