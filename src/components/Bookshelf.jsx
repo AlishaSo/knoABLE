@@ -1,4 +1,4 @@
-import Book from './FoundBooks';
+import FoundBooks from './FoundBooks';
 import {nanoid} from 'nanoid';
 
 export default function Bookshelf(props) {
@@ -6,7 +6,7 @@ export default function Bookshelf(props) {
 
   function renderBooks() {
     return props.booksList.map(book => {
-      return (<Book 
+      return (<FoundBooks 
         key = {nanoid()}
         title = {book.title}
         author = {book.author}
