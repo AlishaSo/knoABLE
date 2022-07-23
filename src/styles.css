@@ -108,13 +108,18 @@ nav a:hover {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - (114.5px + 72px));
   background-color: #faf9f6;
+  overflow: hidden;
+  display: flex;
 }
 
 .home-div {
-  padding: 2em 0;
+  padding: 2em 1.5em;
+  min-height: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .home-div h3 {
@@ -124,7 +129,6 @@ main {
   line-height: 1.4;
   margin-top: 0;
   font-family: 'Bebas Nue', sans-serif;
-  text-transform: uppercase;
 }
 
 footer {
