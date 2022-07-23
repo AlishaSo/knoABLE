@@ -133,8 +133,11 @@ footer {
   padding: 1em;
 }
 
+.footer-link + .footer-link {
+  margin-left: 1em;
+}
+
 .fa-icon {
-  margin-right: 1em;
   color: #27D4E8;
-  filter:drop-shadow(0 0 1px #2B42FF);
+  filter: drop-shadow(0 0 1px #2B42FF);
 }
