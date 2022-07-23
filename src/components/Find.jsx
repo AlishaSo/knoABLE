@@ -26,22 +26,30 @@ export default function Find() {
   }
 
   return (
-    <div>
+    <div className='find-div'>
       <h2>Find a book that is &mdash; or has been &mdash; a NYT besteseller!</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='title'>Title: </label>
-        <input type='text' name='title' />
-
-        <label htmlFor='publisher'>Publisher: </label>
-        <input type='text' name='publisher' />
+        <div className='label-input-pair'>
+          <label htmlFor='title'>Title: </label>
+          <input type='text' name='title' className='find-div-input' />
+        </div>
         
-        <label htmlFor='author'>Author: </label>
-        <input type='text' name='author' />
+        <div className='label-input-pair'>
+          <label htmlFor='publisher'>Publisher: </label>
+          <input type='text' name='publisher' className='find-div-input' />
+        </div>
+        
+        <div className='label-input-pair'>
+          <label htmlFor='author'>Author: </label>
+          <input type='text' name='author' className='find-div-input' />
+        </div>
 
-        <label htmlFor='isbn'>ISBN: </label>
-        <input type='text' name='isbn' />
-
-        <button>Find me a bestseller</button>
+        <div className='label-input-pair'>
+          <label htmlFor='isbn'>ISBN: </label>
+          <input type='text' name='isbn' className='find-div-input' />
+        </div>
+        
+        <button className='find-btn btn'>Find me a bestseller</button>
       </form>
 
       {booksList.length > 0 && <Bookshelf booksList = {booksList} />}
