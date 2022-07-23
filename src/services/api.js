@@ -15,8 +15,7 @@ async function getRandomBook(date) {
     const listsLength = names.data.results.lists.length;
     const randIndex = getRandomNum(listsLength);
     const booksInListLength = names.data.results.lists[randIndex].books.length;
-// console.log(names.data.results.lists)
-    // console.log(names.data.results.lists[randIndex].books[getRandomNum(booksInListLength)])
+    
     return names.data.results.lists[randIndex].books[getRandomNum(booksInListLength)];
   } catch (error) {
     console.error(error);
@@ -43,15 +42,13 @@ async function getRandomBook(date) {
 
 const addImgToBookObj = async booksData => {
   const newBookObjs = booksData.map(async book => {
-    if(book.isbns[0]) {
-      const bookCover = await getBookCover(book.isbns[0].isbn13);
-      book['bookCover'] = `${bookCover}`;
-    }
-    else {
-      const bookCover = await getBookCover(book.ranks_history.primary_isbn13);
-      book['bookCover'] = `${bookCover}`;
-    }
-
+    let bookCover;
+    if(book.isbns[0])
+      bookCover = await getBookCover(book.isbns[0].isbn13);
+    else
+      bookCover = await getBookCover(book.ranks_history.primary_isbn13);
+    
+    book['bookCover'] = `${bookCover}`;
     return book;
   });
 
