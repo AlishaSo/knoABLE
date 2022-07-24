@@ -30,7 +30,7 @@ export default function Discover() {
           min='2008-06-22'
           max={todaysDate}
         />
-        <button>Get a NYT bestseller</button>
+        <button className='discover-btn btn'>Get a NYT bestseller</button>
       </form>
       
       {Object.keys(bookInfo).length > 0 && <RandomBooks bookInfo={bookInfo} />}

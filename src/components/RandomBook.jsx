@@ -26,7 +26,7 @@ export default function RandomBooks(props) {
       <>
         <h4>Buy:</h4>
         <ul>
-          {buy_links.map(link => <li><a href={link.url}>{link.name}</a></li>)}
+          {buy_links.map(link => <li key={nanoid()}><a href={link.url}>{link.name}</a></li>)}
         </ul>
       </>
       }
