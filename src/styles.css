@@ -185,6 +185,10 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
+  .home-div {
+    padding: 2em calc(1.5em + 10vw);
+  }
+  
   .find-div form {
     display: grid;
     grid-template-columns: 1fr 1fr;
