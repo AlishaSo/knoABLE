@@ -145,9 +145,6 @@ main {
 
 .find-div {
   padding: 0 1.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .find-div h2 {
@@ -156,8 +153,18 @@ main {
   max-width: 600px;
 }
 
+.find-div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .find-div .label-input-pair {
   display: grid;
+}
+
+.find-div .label-input-pair + .label-input-pair {
+  margin-top: .5em;
 }
 
 .find-div label {
@@ -176,6 +183,7 @@ main {
 
 .find-btn {
   margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 /* || Discover */
@@ -210,6 +218,67 @@ main {
   margin-top: 2em;
   width: 200px;
   align-self: center;
+}
+
+/* || Bookshelf */
+
+.bookshelf {
+  border-top: 1px solid grey;
+  padding: 3em 0;
+}
+
+/* || FoundBooks && RandomBook; the .book class corresponds to the div inside both of these components */
+
+.book {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f3f2ef;
+  padding: 1em;
+  border-radius: 15px;
+}
+
+.book + .book {
+  margin-top: 2em;
+}
+
+.book:last-child {
+  margin-bottom: 2em;
+}
+
+.book img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.book-title,
+.book h3,
+.book p,
+.book h4,
+.book ul,
+.book ul li {
+  padding-left: 1.5rem;
+}
+
+.book-title {
+  text-transform: uppercase;
+}
+
+.book h3 {
+  font-weight: 600;
+}
+
+.book h4 {
+  margin-bottom: .5em;
+  font-weight: 600;
+}
+
+.book ul {
+  padding: 0;
+}
+
+.book ul li {
+  list-style-type: none;
 }
 
 /* || Footer */
