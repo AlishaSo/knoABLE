@@ -133,11 +133,12 @@ main {
 
 .home-div h3 {
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: calc(1.75rem + .5vmax);
   letter-spacing: 1px;
   line-height: 1.4;
   margin-top: 0;
   font-family: 'Bebas Nue', sans-serif;
+  max-width: 600px;
 }
 
 /* || Find */
@@ -151,7 +152,8 @@ main {
 
 .find-div h2 {
   text-align: center;
-  font-size: calc(1rem + 1.5vmax);
+  font-size: calc(1rem + 1.2vmax);
+  max-width: 600px;
 }
 
 .find-div .label-input-pair {
@@ -186,8 +188,8 @@ main {
 
 .discover-div h2 {
   text-align: center;
-  font-size: calc(1rem + 1.5vmax);
-  max-width: 700px;
+  font-size: calc(1rem + 1.2vmax);
+  max-width: 600px;
 }
 
 .discover-div form {
@@ -227,7 +229,7 @@ footer {
   filter: drop-shadow(0 0 1px #2B42FF);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   header {
     align-items: center;
   }
@@ -258,10 +260,6 @@ footer {
 
   .home-div {
     padding: 2em calc(1.5em + 10vw);
-  }
-
-  .home-div h3 {
-    font-size: calc(1.75rem + 1.5vmax);
   }
   
   .find-div form {
