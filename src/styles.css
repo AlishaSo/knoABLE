@@ -259,6 +259,10 @@ footer {
   .home-div {
     padding: 2em calc(1.5em + 10vw);
   }
+
+  .home-div h3 {
+    font-size: calc(1.75rem + 1.5vmax);
+  }
   
   .find-div form {
     display: grid;
