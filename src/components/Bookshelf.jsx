@@ -18,7 +18,7 @@ export default function Bookshelf(props) {
   }
   
   return (
-    <div className='Bookshelf'>
+    <div className='bookshelf'>
       {renderBooks()}
     </div>
   )
