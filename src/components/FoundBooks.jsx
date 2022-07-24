@@ -12,7 +12,7 @@ export default function FoundBooks(props) {
   return (
     <div className='book'>
       <img src={bookCover} alt='Book cover' />
-      <h2>{title}</h2>
+      <h2 className='book-title'>{title}</h2>
       <h3>by {author}</h3>
       <p>{description}</p>
       {isbns.length > 0 && <>
