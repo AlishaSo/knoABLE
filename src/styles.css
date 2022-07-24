@@ -149,6 +149,10 @@ main {
   align-items: center;
 }
 
+.find-div h2 {
+  font-size: calc(1rem + 1.5vmax);
+}
+
 .find-div .label-input-pair {
   display: grid;
 }
@@ -161,6 +165,10 @@ main {
 
 .find-div label:first-child {
   margin-top: 0;
+}
+
+.find-div .label-input-pair input {
+  text-align: center;
 }
 
 .find-btn {
