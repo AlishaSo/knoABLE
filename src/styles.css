@@ -167,6 +167,40 @@ main {
   margin-top: 2em;
 }
 
+/* || Discover */
+.discover-div {
+  padding: 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discover-div h2 {
+  text-align: center;
+  font-size: calc(1rem + 1.5vmax);
+  max-width: 700px;
+}
+
+.discover-div form {
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-div label {
+  font-weight: 600;
+  margin-bottom: .25em;
+}
+
+.discover-div input {
+  text-align: center;
+}
+
+.discover-btn {
+  margin-top: 2em;
+  width: 200px;
+  align-self: center;
+}
+
 /* || Footer */
 
 footer {
