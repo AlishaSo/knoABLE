@@ -227,6 +227,34 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
+  header {
+    align-items: center;
+  }
+
+  .nav-toggle {
+    visibility: hidden;
+  }
+
+  nav {
+    visibility: visible;
+    position: static;
+    margin-right: 0;
+    margin-left: auto;
+    width: max-content;
+    flex-direction: row;
+    background-color: unset;
+  }
+
+  nav a {
+    color: #27D4E8;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  nav a + a {
+    margin-left: 1em;
+  }
+
   .home-div {
     padding: 2em calc(1.5em + 10vw);
   }
