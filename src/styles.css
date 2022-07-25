@@ -108,6 +108,7 @@ nav a {
   color: #38B6FF;
 }
 
+nav a:link,
 nav a:visited {
   color: #38B6FF;
 }
