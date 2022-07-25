@@ -20,6 +20,9 @@ body {
 header {
   padding: 1.5em 1.75em 1.5em 0;
   background-color: #2BFFDB;
+}
+
+.wrapper {
   display: flex;
 }
 
@@ -208,7 +211,7 @@ main {
 
 .find-btn {
   margin-top: 2em;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   width: 280px;
 }
 
@@ -361,7 +364,9 @@ footer {
   color: #38B6FF;
 }
 
-@media screen and (min-width: 700px) {
+/* || Tablet styles */
+
+@media screen and (min-width: 700px) and (max-width: 890px) {
   header {
     align-items: center;
   }
@@ -422,7 +427,6 @@ footer {
 
   .find-btn {
     margin-top: 1em;
-    margin-bottom: 0;
     position: absolute;
     top: 7em;
     left: 6em;
@@ -431,6 +435,100 @@ footer {
 
   .bookshelf {
     width: 100%;
+    margin-top: 2em;
+    border-top: 0;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, .33fr));
+    justify-content: center;
+  }
+
+  .book {
+    width: 250px;
+  }
+
+  .book + .book {
+    margin-top: 0;
+  }
+
+  .book:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* || Desktop styles */
+
+@media screen and (min-width: 891px) {
+  .wrapper {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .nav-toggle {
+    visibility: hidden;
+  }
+
+  nav {
+    visibility: visible;
+    position: static;
+    margin-right: 0;
+    margin-left: auto;
+    width: max-content;
+    flex-direction: row;
+    background-color: unset;
+  }
+
+  nav a {
+    color: #27D4E8;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  nav a + a {
+    margin-left: 1em;
+  }
+  
+  .home-div {
+    padding: 2em calc(1.5em + 10vw);
+  }
+  
+  .find-div form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto min-content;
+    column-gap: 2em;
+    row-gap: 1em;
+    position: relative;
+  }
+
+  .find-div form:last-child {
+    justify-self: center;
+  }
+
+  .find-div label {
+    margin-top: 0;
+  }
+
+  .find-div .label-input-pair {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .find-div .label-input-pair + .label-input-pair {
+    margin-top: 0;
+  }
+
+  .find-btn {
+    margin-top: 1em;
+    position: absolute;
+    top: 7em;
+    left: 6em;
+    right: 5em;
+  }
+
+  .bookshelf {
+    width: 100%;
+    margin-top: 2em;
     border-top: 0;
     display: grid;
     grid-gap: 1em;
