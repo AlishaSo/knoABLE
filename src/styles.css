@@ -233,7 +233,7 @@ main {
 }
 
 /* || FoundBooks */
-/* || RandomBook */
+/* || RandomBook: book */
 /* the .book class corresponds to the div inside both of these components */
 
 .book {
@@ -289,6 +289,33 @@ main {
 
 .book ul li {
   list-style-type: none;
+}
+
+/* || RandomBook */
+
+.random-book-div {
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+
+.random-book-div .book {
+  width: 350px;
+}
+
+.book a {
+  color: #276FE8;
+  text-decoration: none;
+}
+
+.book a:hover,
+.book a:focus {
+  color: #fff;
+  background-color: #2BFFDB;
+  border-bottom: 2px solid #000;
+}
+
+.link-icon {
+  color: #000;
 }
 
 /* || Footer */
