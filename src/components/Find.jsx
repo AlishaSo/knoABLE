@@ -27,7 +27,7 @@ export default function Find() {
 
   return (
     <div className='find-div'>
-      <h2>Find a book that is &mdash; or has been &mdash; a NYT besteseller!</h2>
+      <h2 className='page-title'>Find a book that is &mdash; or has been &mdash; a NYT besteseller!</h2>
       <form onSubmit={handleSubmit}>
         <div className='label-input-pair'>
           <label htmlFor='title'>Title: </label>
