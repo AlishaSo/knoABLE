@@ -145,6 +145,22 @@ main {
   max-width: 600px;
 }
 
+/* || Buttons inside Find and Discover components */
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: .5em 1.5em;
+  background-color: #2BFFDB;
+  color: #0ba3fb;
+  cursor: pointer;
+}
+
 /* || Find */
 
 .find-div {
@@ -193,6 +209,7 @@ main {
 .find-btn {
   margin-top: 2em;
   margin-bottom: 4em;
+  width: 280px;
 }
 
 /* || Discover */
@@ -225,7 +242,6 @@ main {
 
 .discover-btn {
   margin-top: 2em;
-  width: 200px;
   align-self: center;
 }
 
@@ -381,8 +397,14 @@ footer {
   .find-div form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto min-content;
     column-gap: 2em;
     row-gap: 1em;
+    position: relative;
+  }
+
+  .find-div form:last-child {
+    justify-self: center;
   }
 
   .find-div label {
@@ -394,9 +416,17 @@ footer {
     flex-direction: column;
   }
 
+  .find-div .label-input-pair + .label-input-pair {
+    margin-top: 0;
+  }
+
   .find-btn {
     margin-top: 1em;
-    grid-column: 1 / -1;
+    margin-bottom: 0;
+    position: absolute;
+    top: 7em;
+    left: 6em;
+    right: 5em;
   }
 
   .bookshelf {
