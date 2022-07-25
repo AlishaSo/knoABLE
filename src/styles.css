@@ -33,7 +33,7 @@ header {
   width: 2.5em;
   height: 1.6em;
   padding: 0;
-  color: #27D4E8;
+  color: #38B6FF;
   background-color: transparent;
   transition: color 250ms ease;
 
@@ -102,7 +102,11 @@ nav a {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  color: #2BFFDB;
+  color: #38B6FF;
+}
+
+nav a:visited {
+  color: #38B6FF;
 }
 
 nav a:hover {
@@ -327,12 +331,18 @@ footer {
 }
 
 .footer-link + .footer-link {
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .fa-icon {
-  color: #27D4E8;
-  filter: drop-shadow(0 0 1px #2B42FF);
+  color: #38B6FF;
+  transition: transform .2s linear;
+}
+
+.fa-icon:hover,
+.fa-icon:focus {
+  transform: scale(1.5);
+  color: #38B6FF;
 }
 
 @media screen and (min-width: 700px) {
