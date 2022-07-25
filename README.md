@@ -13,10 +13,21 @@ Do you love reading books, but have a hard time finding new ones to read? Are yo
 
 ## Wireframes
 
+### Desktop
 
+![](./src/images/Home_component.png)
+![](./src/images/Find_component.png)
+![](./src/images/Discover_component.png)
+![](./src/images/Bookshelf_component.png)
+![](./src/images/Book_component-desktop.png)
+
+### Mobile
+
+![](./src/images/Book_component-mobile.png)
 
 ## Component Hierarchy
 
+![](./src/images/knoABLE_Component_Hierarchy.png)
 
 ## API
 
