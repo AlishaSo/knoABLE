@@ -1,6 +1,6 @@
 import {getRandomBook} from '../services/api';
 import {useState} from 'react';
-import RandomBooks from './RandomBook';
+import RandomBook from './RandomBook';
 
 export default function Discover() {
   const [bookInfo, setBookInfo] = useState({});
@@ -33,7 +33,7 @@ export default function Discover() {
         <button className='discover-btn btn'>Get a NYT bestseller</button>
       </form>
       
-      {Object.keys(bookInfo).length > 0 && <RandomBooks bookInfo={bookInfo} />}
+      {Object.keys(bookInfo).length > 0 && <RandomBook bookInfo={bookInfo} />}
     </div>
   )
 }
